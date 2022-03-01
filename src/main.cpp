@@ -1,11 +1,17 @@
+#include <iostream>
 #include "CGame.h"
+
+using namespace std;
 
 int main() {
 
     CGame game;
-    game.init();
+    cout << "game init start" << endl;
+    game.init(true, true);
+
+    cout << "gamestart" << endl;
     while( game.run() ) {};
+    cout << "game ended" << endl;
 
-
-    return 0;
+    return 2;
 }

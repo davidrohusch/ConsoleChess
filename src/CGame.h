@@ -1,26 +1,22 @@
-//
-// Created by david on 23.2.22.
-//
-
-#ifndef CONSOLECHESS_CGAME_H
-#define CONSOLECHESS_CGAME_H
-
+#pragma once
 #include <iostream>
 #include <memory>
 #include <vector>
-#include "CPlayer.h"
-#include "CFigure.h"
+#include "players/CPlayer.h"
+#include "pieces/CPiece.h"
 using namespace std;
 class CGame{
 private:
-    CPlayer playerOne, playerTwo;
-    vector <shared_ptr<CFigure>> gameBoard;
+    shared_ptr<CPlayer> playerOne, playerTwo;
+    vector <shared_ptr<CPiece>> pieceSetOne, pieceSetTwo;
+    vector <shared_ptr<CPiece>> graveOne, graveTwo;
+
+    vector <shared_ptr<CPiece>> gameBoard;
+    int round ;
 public:
-
-    void init();
+    CGame();
+    void init(bool isP1human, bool isP2human);
     bool run ();
-
+    void loadBoard ();
 
 };
-
-#endif //CONSOLECHESS_CGAME_H
