@@ -1,9 +1,5 @@
-//
-// Created by david on 28.2.22.
-//
+#pragma once
 
-#ifndef CONSOLECHESS_CQUEEN_H
-#define CONSOLECHESS_CQUEEN_H
 #include "CPiece.h"
 
 class CQueen : public CPiece{
@@ -11,4 +7,3 @@ class CQueen : public CPiece{
 };
 
 
-#endif //CONSOLECHESS_CQUEEN_H

@@ -1,7 +1,4 @@
-//
-// Created by david on 28.2.22.
-//
-
+#pragma once
 #include "CPlayer.h"
 
 

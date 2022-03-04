@@ -1,4 +1,5 @@
 #pragma once
+
 class CPiece{
 private:
     int xPos, yPos;
