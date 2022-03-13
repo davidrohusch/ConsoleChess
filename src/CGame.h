@@ -18,5 +18,7 @@ public:
     void init(bool isP1human, bool isP2human);
     bool run ();
     void loadBoard ();
-
+private:
+    void printScreen();
+    void drawGameBoard();
 };
