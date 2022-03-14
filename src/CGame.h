@@ -4,14 +4,34 @@
 #include <vector>
 #include "players/CPlayer.h"
 #include "pieces/CPiece.h"
+#include "CChessBoard.h"
+
 using namespace std;
 class CGame{
 private:
     shared_ptr<CPlayer> playerOne, playerTwo;
-    vector <shared_ptr<CPiece>> pieceSetOne, pieceSetTwo;
-    vector <shared_ptr<CPiece>> graveOne, graveTwo;
+    CHESSBOARD chessboard;
 
-    vector <shared_ptr<CPiece>> gameBoard;
+          char gameBoard[18][36];
+    const char gameBoardTemplate[18][36] ={
+                 "  ___ ___ ___ ___ ___ ___ ___ ___\n",
+                 "8|   |   |   |   |   |   |   |   |\n",
+                 " |___|___|___|___|___|___|___|___|\n",
+                 "7|   |   |   |   |   |   |   |   |\n",
+                 " |___|___|___|___|___|___|___|___|\n",
+                 "6|   |   |   |   |   |   |   |   |\n",
+                 " |___|___|___|___|___|___|___|___|\n",
+                 "5|   |   |   |   |   |   |   |   |\n",
+                 " |___|___|___|___|___|___|___|___|\n",
+                 "4|   |   |   |   |   |   |   |   |\n",
+                " |___|___|___|___|___|___|___|___|\n",
+                "3|   |   |   |   |   |   |   |   |\n",
+                " |___|___|___|___|___|___|___|___|\n",
+                "2|   |   |   |   |   |   |   |   |\n",
+                " |___|___|___|___|___|___|___|___|\n",
+                "1|   |   |   |   |   |   |   |   |\n",
+                " |___|___|___|___|___|___|___|___|\n",
+                "   a   b   c   d   e   f   g   h"};
     int round ;
 public:
     CGame();

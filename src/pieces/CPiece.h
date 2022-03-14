@@ -1,12 +1,15 @@
 #pragma once
 
 class CPiece{
-private:
-    int xPos, yPos;
 public:
-    CPiece(int xPos, int yPos);
+    enum Player {WHITE , BLACK};
+private:
+    Player player;
+public:
+    CPiece(Player player);
 
     virtual void move() = 0;
+
 
 
 };

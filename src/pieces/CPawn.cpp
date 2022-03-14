@@ -3,12 +3,15 @@
 //
 
 #include "CPawn.h"
+#include <iostream>
 
-CPawn::CPawn(int xPos, int yPos) : CPiece(xPos, yPos) {
-
-}
 
 void CPawn::move() {
 
 }
+
+CPawn::CPawn(CPiece::Player player) : CPiece(player) {
+
+}
+
 

@@ -4,6 +4,8 @@
 
 #include "CPiece.h"
 
-CPiece::CPiece(int xPos, int yPos) : xPos(xPos), yPos(yPos) {
+
+
+CPiece::CPiece(CPiece::Player player) : player(player) {
 
 }
